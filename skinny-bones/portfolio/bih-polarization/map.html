@@ -34,6 +34,14 @@
     <meta http-equiv="cleartype" content="on">
 
     <link rel="stylesheet" href="https://mmistakes.github.io/skinny-bones-jekyll/css/main.css">
+      
+      <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+    <![endif]-->
+    <!--Switch between the different themes changing the stylesheet below - light-theme.css |dark-theme.css -->
+    <link rel="stylesheet" href="../../../Project/css/dark-theme.css">
+    <link rel="stylesheet" href="../../../Project/css/makeitresponsive.css">
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
       <script src="https://mmistakes.github.io/skinny-bones-jekyll/js/vendor/html5shiv.min.js"></script>
@@ -131,7 +139,8 @@
 
 <p>If this is working correctly the video should fill the main content container.</p>
 
-<iframe width="1200" height="600" src="https://josipbroz86.github.io/Project/index.html" frameborder="0"> </iframe>
+<!--<iframe width="1200" height="600" src="https://josipbroz86.github.io/Project/index.html" frameborder="0"> </iframe>-->
+                <div class="map" id="map"></div>
 
 				<hr />
 				<footer class="page-footer">
@@ -188,6 +197,60 @@
     <script src="https://mmistakes.github.io/skinny-bones-jekyll/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="https://mmistakes.github.io/skinny-bones-jekyll/js/main.js"></script>
 
+    <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+    <!--Change the URL below in order to change the map that is being shown.
+    Go to your map in CartoDB, click on share, and copy the URL undert the API section
+    Check the cartodb.js documentation for more info
+    http://developers.cartodb.com/documentation/cartodb-js.html-->
+    <script>
+        
+      var data1991Layer;
+      var LandminesLayer;
+      var bih2013layerdataLayer;
+      
+      $(document).ready(function () {
+        cartodb.createVis('map', 'https://thenewschool.carto.com/u/stanm282/api/v2/viz/29017e14-34df-11e7-b841-0ef7f98ade21/viz.json',
+                          {
+            
+            cartodb_logo: false,
+        })
+                
+        
+          .done(function (vis, layers) {
+            
+            data1991Layer = layers[1].getSubLayer(1);
+            LandminesLayer = layers[1].getSubLayer(2);
+          
+          });
+            
+             
+         
+        $('.data1991-checkbox').change(function () {
+          if ($('.data1991-checkbox').prop('checked')) {
+            // If checked, show the layer
+            data1991Layer.show();
+          }
+          else {
+            // Else, hide it
+            data1991Layer.hide();
+          }
+        
+        });
+          
+          
+        $('.landmines-checkbox').change(function () {
+          if ($('.landmines-checkbox').prop('checked')) {
+            // If checked, show the layer
+            LandminesLayer.show();
+          }
+          else {
+            // Else, hide it
+            LandminesLayer.hide();
+          }
+        });
+      });
+    
+    </script>
   </body>
 
 </html>

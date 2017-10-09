@@ -77,14 +77,9 @@
         
           .done(function (vis, layers) {
             
-            // Use same ordering as the one in carto
-            bih2013layerdataLayer = layers[1].getSubLayer(0);
             data1991Layer = layers[1].getSubLayer(1);
             LandminesLayer = layers[1].getSubLayer(2);
-            
-            // hide layers by default
-            data1991Layer.hide();
-            LandminesLayer.hide();
+          
           });
             
              
