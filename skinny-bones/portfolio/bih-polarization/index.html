@@ -1,257 +1,359 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Post with Large Feature Image and Text • Skinny Bones</title>
-    <meta name="description" content="Custom written post descriptions are the way to go... if you're not lazy.">
-    <meta name="keywords" content="sample, readability">
-    
-    	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="Post with Large Feature Image and Text">
-	<meta name="twitter:description" content="Custom written post descriptions are the way to go... if you're not lazy.">
-	<meta name="twitter:site" content="@mmistakes">
-	<meta name="twitter:creator" content="@mmistakes">
-	
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="https://mmistakes.github.io/skinny-bones-jekyll/images/1600x800.gif">
-	
-	<!-- Open Graph -->
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Post with Large Feature Image and Text">
-	<meta property="og:description" content="Custom written post descriptions are the way to go... if you're not lazy.">
-	<meta property="og:url" content="https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/">
-	<meta property="og:site_name" content="Skinny Bones">
 
-    <link rel="canonical" href="https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/">
+<head>
+    <meta charset="utf-8">
+    <title>Marko Stanic</title>
+    <meta name="description" content="An intersection of international conflict and geographic information systems">
+    <meta name="keywords" content="sample, readability">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Marko Stanic">
+
+    <meta name="twitter:site" content="@markostanich">
+    <meta name="twitter:creator" content="@markostanich">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://josipbroz86.github.io/skinny-bones/images/Siege_Sarajevo.JPG">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Marko Stanic">
+
+    <meta property="og:url" content="https://josipbroz86.github.io/skinny-bones/">
+    <meta property="og:site_name" content="Content">
+    <link rel="author" href="https://www.linkedin.com/in/markostanic" />
+
+    <link rel="canonical" href="https://josipbroz86.github.io/skinny-bones/">
 
     <link href="https://mmistakes.github.io/skinny-bones-jekyll/atom.xml" type="application/atom+xml" rel="alternate" title="Skinny Bones Atom Feed">
-    <link href="https://mmistakes.github.io/skinny-bones-jekyll/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="cleartype" content="on">
 
-    <link rel="stylesheet" href="https://mmistakes.github.io/skinny-bones-jekyll/css/main.css">
+    <link rel="stylesheet" href="https://josipbroz86.github.io/skinny-bones/css/main.css">
+    <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <style>
+        #map {
+            display: block;
+            height: 500px;
+        }
+        
+        .checkbox-container > li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .checkbox-container label {
+            display: inline;
+        }
+    </style>
     <!-- HTML5 Shiv and Media Query Support for IE -->
     <!--[if lt IE 9]>
       <script src="https://mmistakes.github.io/skinny-bones-jekyll/js/vendor/html5shiv.min.js"></script>
       <script src="https://mmistakes.github.io/skinny-bones-jekyll/js/vendor/respond.min.js"></script>
     <![endif]-->
 
-  </head>
+</head>
 
-  <body id="js-body">
+<body id="js-body">
     <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
 
     <header id="masthead">
-  <div class="inner-wrap">
-    <a href="https://mmistakes.github.io/skinny-bones-jekyll/" class="site-title">Skinny Bones</a>
-    <nav role="navigation" class="menu top-menu">
-        <ul class="menu-item">
-	<li class="home"><a href="/">Skinny Bones</a></li>
-	
-    
-    <li><a href="https://mmistakes.github.io/skinny-bones-jekyll/getting-started/" >Getting Started</a></li>
-  
-    
-    <li><a href="https://mmistakes.github.io/skinny-bones-jekyll/articles/" >Sample Articles</a></li>
-  
-    
-    <li><a href="https://mmistakes.github.io/skinny-bones-jekyll/media/" >Media</a></li>
-  
-    
-    <li><a href="https://mmistakes.github.io/skinny-bones-jekyll/about/" >About</a></li>
-  
-</ul>
-    </nav>
-  </div><!-- /.inner-wrap -->
-</header><!-- /.masthead -->
+        <div class="inner-wrap">
+            <a href="http://www.markostanic.net" class="site-title">Marko Stanic</a>
+            <nav role="navigation" class="menu top-menu">
+                <ul class="menu-item">
+                    <li class="home"><a href="/">Marko Stanic</a></li>
+
+
+                    <li><a href="#">GIS Projects</a></li>
+
+
+                    <li><a href="#">Research Portfolio</a></li>
+
+
+                    <li><a href="#">Blog</a></li>
+
+
+                    <li><a href="#">About Me</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <!-- /.inner-wrap -->
+    </header>
+    <!-- /.masthead -->
     <nav role="navigation" id="js-menu" class="sliding-menu-content">
-  <h5>Skinny Bones <span>Table of Contents</span></h5>
-  <ul class="menu-item">
-    <li>
-      <a href="https://mmistakes.github.io/skinny-bones-jekyll/getting-started/">
+        <h5>Marko Stanic<span>Table of Contents</span></h5>
+        <ul class="menu-item">
+            <li>
+                <a href="#">
         <img src="https://mmistakes.github.io/skinny-bones-jekyll/images/400x250.gif" alt="teaser" class="teaser">
-        <div class="title">Getting Started</div>
-        <p class="excerpt">Everything you need to know to get started with Skinny Bones and Jekyll.</p>
+        <div class="title">GIS Projects</div>
+        <p class="excerpt">Check out my maps and other GIS work.</p>
       </a>
-    </li><li>
-      <a href="https://mmistakes.github.io/skinny-bones-jekyll/articles/">
+            </li>
+            <li>
+                <a href="#">
         <img src="https://mmistakes.github.io/skinny-bones-jekyll/images/400x250.gif" alt="teaser" class="teaser">
-        <div class="title">Sample Articles</div>
-        <p class="excerpt">Examples of long form posts.</p>
+        <div class="title">Research Portfolio</div>
+        <p class="excerpt">My graduate research portfolio, including other works.</p>
       </a>
-    </li><li>
-      <a href="https://mmistakes.github.io/skinny-bones-jekyll/media/">
+            </li>
+            <li>
+                <a href="#">
         <img src="https://mmistakes.github.io/skinny-bones-jekyll/images/400x250.gif" alt="teaser" class="teaser">
-        <div class="title">Media</div>
-        <p class="excerpt">Examples of media posts perfect for showcasing work, photographs, etc.</p>
+        <div class="title">Blog</div>
+        <p class="excerpt">Its a blog!</p>
       </a>
-    </li><li>
-      <a href="https://mmistakes.github.io/skinny-bones-jekyll/about/">
+            </li>
+            <li>
+                <a href="#">
         <img src="https://mmistakes.github.io/skinny-bones-jekyll/images/400x250.gif" alt="teaser" class="teaser">
-        <div class="title">About</div>
-        <p class="excerpt">All about Skinny Bones for Jekyll.</p>
+        <div class="title">About Me</div>
+        <p class="excerpt">All about me</p>
       </a>
-    </li>
-  </ul>
-</nav>
-<button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
+            </li>
+        </ul>
+    </nav>
+    <button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
   <span class="nav-lines"></span>
 </button>
 
-<div id="js-menu-screen" class="menu-screen"></div>
+    <div id="js-menu-screen" class="menu-screen"></div>
 
 
     <div id="page-wrapper">
-      <div id="main" role="main">
-	<article class="wrap" itemscope itemtype="http://schema.org/Article">
-		
-		<div class="page-feature">
-			<div class="page-image">
-				<img src="https://mmistakes.github.io/skinny-bones-jekyll/images/1600x800.gif" class="page-feature-image" alt="Post with Large Feature Image and Text" itemprop="image">
-				
-			</div><!-- /.page-image -->
-		</div><!-- /.page-feature -->
-		
-		
-  <nav class="breadcrumbs">
-    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="https://mmistakes.github.io/skinny-bones-jekyll" itemprop="url">
+        <div id="main" role="main">
+            <article class="wrap" itemscope itemtype="http://schema.org/Article">
+
+                <div class="page-feature">
+                    <div class="page-image">
+                        <div id="map"></div>
+                        <img src="images/legend.jpg">
+                        <ul class="checkbox-container">
+                            <li>
+                                <label for="data1991">BiH 1991 Demographics</label>
+                                <input id="data1991" type="checkbox" class="data1991-checkbox">
+                            </li>
+                            <li>
+                                <label for="Landmines">Landmine situation</label>
+                                <input id="Landmines" type="checkbox" class="landmines-checkbox">
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <!-- /.page-image -->
+                </div>
+                <!-- /.page-feature -->
+
+
+                <nav class="breadcrumbs">
+                    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="https://josipbroz86.github.io/skinny-bones/" itemprop="url">
         <span itemprop="title">Home</span>
-      </a> › 
-    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-      <a href="https://mmistakes.github.io/skinny-bones-jekyll/articles/" itemprop="url">
+                    </a> ›
+                    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="https://josipbroz86.github.io/skinny-bones/portfolio" itemprop="url">
         <span itemprop="title">Articles</span>
-      </a>
-    </span>
-  </nav><!-- /.breadcrumbs -->
+                    </a>
+                    </span>
+                </nav>
+                <!-- /.breadcrumbs -->
 
-		<div class="page-title">
-			<h1>Post with Large Feature Image and Text</h1>
-		</div>
-		<div class="inner-wrap">
-			<div id="content" class="page-content" itemprop="articleBody">
-				<p>This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90’s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</p>
+                <div class="page-title">
+                    <h1>Visualizing Bosnia's ethnic polarization in the wake of war</h1>
+                </div>
+                <div class="inner-wrap">
+                    <div id="content" class="page-content" itemprop="articleBody">
+                        <p>On June 2016, Bosnia & Herzegovina <a href="http://www.popis2013.ba/popis2013/doc/Popis2013prvoIzdanje.pdf">published the results of its 2013 population census</a>. The census was significant because it was the first one conducted since the 1992-1995 war that gripped the country and much of the Balkans. The country's last census was conducted in 1991, one year before the country was plunged into a conflict. Given the war's ethnic issues, comparing the ethnic demographics from the two censuses is vital for understanding the post-war Bosnia </p>
 
-<nav class="toc">
-<ul id="markdown-toc">
-  <li><a href="#cupidatat-90s-lo-fi-authentic-try-hard" id="markdown-toc-cupidatat-90s-lo-fi-authentic-try-hard">Cupidatat 90’s lo-fi authentic try-hard</a></li>
-  <li><a href="#forage-occaecat-cardigan-qui" id="markdown-toc-forage-occaecat-cardigan-qui">Forage occaecat cardigan qui</a></li>
-  <li><a href="#hoodie-duis" id="markdown-toc-hoodie-duis">Hoodie Duis</a></li>
-</ul>
+                        <nav class="toc">
+                            <ul id="markdown-toc">
+                                <li><a href="#methodology" id="markdown-toc-methodology">Methodology</a></li>
+                                <li><a href="#data" id="markdown-toc-data">Data</a></li>
+                                <li><a href="#othermaterials" id="markdown-toc-othermaterial">Other Materials</a></li>
+                            </ul>
 
-</nav>
+                        </nav>
 
-<p>Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.</p>
+                        <p>The default map which you see at the top of this page illustrates Bosnia & Herzegovina's current ethnic breakdown on the municipal level. This depiction is based on the data pulled from the 2013 census. By checking 'BiH 1991 Demographics' and 'Landmine Situation' buttons below the map, you're able to toggle the 1991 census data, as well as the current status of un-cleared landmines (a remnant of the war). </p>
 
-<h2 id="cupidatat-90s-lo-fi-authentic-try-hard">Cupidatat 90’s lo-fi authentic try-hard</h2>
+                        <h2 id="methodology">Methodology</h2>
 
-<p>In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s.</p>
+                        <p>I decided to include the landmine overlay in an effort provide an additional variable to understanding the dynamics of ethnic strife. Note how the 'landmine situation' seemingly creates the border between newly formed ethnic enclaves.</p>
 
-<ul>
-  <li>Sartorial hoodie</li>
-  <li>Labore viral forage</li>
-  <li>Tote bag selvage</li>
-  <li>DIY exercitation et id ugh tumblr church-key</li>
-</ul>
+                        <p> The 1991 census data required a decent amount of wrangling. The dataset with which I worked came in a .PDF format and it was very obvious that the PDF file was a scanned version of the 1991 document. Because it was an original document, it was written in Serbo-Croatian and required translating. Fortunately being native to Bosnia, I was able to translate the text and import the numbers into an Excel table using the <a href="https://www.pdftables.com">PDF Tables service.</a> The 2013 census data came in a much more digital format, and was also published in English.</p>
 
-<p>Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.</p>
+                        <p>Wrangling both sets of data took some time. The biggest obstacle I faced involved the municipalities of Bosnia itself. When the census was conducted in 1991 Bosnia was comprised of 109 municipalities. After the wars end the Dayton Peace Accords established 143 municipalities divided between the Federation of Bosnia & Herzegovina, and Republika Srpska. Thus to compare the data of one municipality with another that did not exist prior to the war required that I also use two different ArcGIS shapefiles.
+                        </p>
+                        
+                        <p>As previously mentioned, this project required a significant amount data wrangling in Microsoft Excel. The map itself was created using <a href="https://www.carto.com">Carto</a>, a web-based mapping service. ArcGIS was also used to edit the shapefiles for the municipal boundries. </p>
 
-<p>Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.</p>
+                        <h2 id="data">Data</h2>
 
-<h2 id="forage-occaecat-cardigan-qui">Forage occaecat cardigan qui</h2>
+                        <p>I sourced the following materials for this project:</p>
 
-<p>Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.</p>
+                        <ul>
+                            <li><a href="http://www.popis2013.ba/popis2013/doc/Popis2013prvoIzdanje.pdf" target="_blank">Bosnia & Herzegovina 2013 Census</a></li>
+                            <li><a href="http://fzs.ba/index.php/popis-stanovnistva/popis-stanovnistva-1991-i-stariji" target="_blank">Socialist Republic of Bosnia & Herzegovina 1991 Census</a></li>
+                            <li><a href="https://datahub.io/dataset/bosnia-and-herzegovina-municipalities" target="_blank">2013 BiH Municipality Boundries Data by Codrina Ilie</a></li>
+                            <li><a href="http://andybeger.com/2011/01/18/bosnia-1991-municipalities/" target="_blank">1991 BiH Municipality Boundries Data by Andy Beger</a></li>
+                            <li><a href="http://www.bhmac.org/?page_id=629&lang=bs/" target="_blank">Current landmine situation by BiH Mine Action Center</a></li>
 
-<blockquote>
-  <p>Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.</p>
-</blockquote>
+                        </ul>
 
-<p>Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.</p>
 
-<h2 id="hoodie-duis">Hoodie Duis</h2>
+                        <h2 id="othermaterials">Other Materials</h2>
 
-<p>Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.</p>
+                        <p>I worked on this project as part of my graduate study at The New School. I'm in the process of uploading the spreadsheet data that was used to create this map. Check back soon!</p>
 
-<h3 id="thundercats-ho">Thundercats Ho!</h3>
 
-<p>Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.</p>
+                        <hr />
+                        <footer class="page-footer">
 
-<p>Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.</p>
 
-<p>Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.</p>
+                            <div class="author-image">
+                                <img src="images/bio-photo.jpg" alt="Marko Stanic">
+                            </div>
+                            <!-- ./author-image -->
+                            <div class="author-content">
+                                <h3 class="author-name">Written by <a href="https://www.linkedin.com/in/markostanic/" itemprop="author">Marko Stanic</a></h3>
+                                <p class="author-bio">International Affairs graduate, GIS enthusiast.</p>
+                            </div>
+                            <!-- ./author-content -->
+                            <div class="inline-btn">
+                                <a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=Post%20with%20Large%20Feature%20Image%20and%20Text&amp;url=https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/&amp;via=mmistakes" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+                                <a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+                                <a class="btn-social google-plus" href="https://plus.google.com/share?url=https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
+                            </div>
+                            <!-- /.share-this -->
 
-				<hr />
-				<footer class="page-footer">
-					
+                            <div class="page-meta">
+                                <p>Updated <time datetime="2017-09-28T00:00:00Z" itemprop="dateModified">September 28, 2017</time>
+                            </div>
+                            <!-- /.page-meta -->
+                        </footer>
+                        <!-- /.footer -->
+                        <aside>
 
-<div class="author-image">
-	<img src="https://mmistakes.github.io/skinny-bones-jekyll/images/bio-photo.jpg" alt="Michael Rose">
-</div><!-- ./author-image -->
-<div class="author-content">
-	<h3 class="author-name" >Written by <a href="https://mademistakes.com" itemprop="author">Michael Rose</a></h3>
-	<p class="author-bio">Just another boring, tattooed, time traveling designer.</p>
-</div><!-- ./author-content -->
-					<div class="inline-btn">
-	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=Post%20with%20Large%20Feature%20Image%20and%20Text&amp;url=https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/&amp;via=mmistakes" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
-	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-	<a class="btn-social google-plus"  href="https://plus.google.com/share?url=https://mmistakes.github.io/skinny-bones-jekyll/articles/readability-feature-post/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
-</div><!-- /.share-this -->
+                        </aside>
+                    </div>
+                    <!-- /.content -->
+                </div>
+                <!-- /.inner-wrap -->
+                <div class="ads">
+                    <style>
+                        .responsive-ads {
+                            width: 300px;
+                            height: 200px;
+                        }
 
-					<div class="page-meta">
-	<p>Updated <time datetime="2013-06-30T00:00:00Z" itemprop="dateModified">June 30, 2013</time>
-</div><!-- /.page-meta -->
-				</footer><!-- /.footer -->
-				<aside>
-					
-				</aside>
-			</div><!-- /.content -->
-		</div><!-- /.inner-wrap -->
-		<div class="ads"><style>
-.responsive-ads { width: 300px; height: 200px; }
-@media(min-width: 520px) { .responsive-ads { width: 468px; height: 60px; } }
-@media(min-width: 768px) { .responsive-ads { width: 160px; height: 600px; } }
-</style>
+                        @media(min-width: 520px) {
+                            .responsive-ads {
+                                width: 468px;
+                                height: 60px;
+                            }
+                        }
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle responsive-ads"
-	style="display:inline-block"
-	data-ad-client="ca-pub-7328585512091257"
-	data-ad-slot="3049671934"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></div><!-- /.ads -->
-	</article><!-- ./wrap -->
-</div><!-- /#main -->
+                        @media(min-width: 768px) {
+                            .responsive-ads {
+                                width: 160px;
+                                height: 600px;
+                            }
+                        }
+                    </style>
 
-      <footer role="contentinfo" id="site-footer">
-	<nav role="navigation" class="menu bottom-menu">
-		<ul class="menu-item">
-		
-      
-			<li><a href="https://mmistakes.github.io/skinny-bones-jekyll/" >Home</a></li>
-		
-      
-			<li><a href="https://mmistakes.github.io/skinny-bones-jekyll/getting-started/" >Getting Started</a></li>
-		
-      
-			<li><a href="https://mmistakes.github.io/skinny-bones-jekyll/about/" >About</a></li>
-		
-      
-			<li><a href="https://mmistakes.github.io/skinny-bones-jekyll/terms/" >Terms</a></li>
-		
-		</ul>
-	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2017 <a href="https://mmistakes.github.io/skinny-bones-jekyll">Skinny Bones</a> powered by <a href="http://jekyllrb.com">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/">Skinny Bones</a>.</p>
-</footer>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle responsive-ads" style="display:inline-block" data-ad-client="ca-pub-7328585512091257" data-ad-slot="3049671934"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- /.ads -->
+            </article>
+            <!-- ./wrap -->
+        </div>
+        <!-- /#main -->
+
+        <footer role="contentinfo" id="site-footer">
+            <nav role="navigation" class="menu bottom-menu">
+                <ul class="menu-item">
+
+
+                    <li><a href="#">Home</a></li>
+
+
+                    <li><a href="#">About</a></li>
+
+
+                    <li><a href="#">Terms</a></li>
+
+                </ul>
+            </nav>
+            <!-- /.bottom-menu -->
+            <p class="copyright">Website designed using: &#169; 2017 <a href="https://mmistakes.github.io/skinny-bones-jekyll">Skinny Bones</a> powered by <a href="http://jekyllrb.com">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/">Skinny Bones</a>.</p>
+        </footer>
     </div>
 
-    <script src="https://mmistakes.github.io/skinny-bones-jekyll/js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="https://mmistakes.github.io/skinny-bones-jekyll/js/main.js"></script>
+    <script src="https://josipbroz86.github.io/skinny-bones/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="https://josipbroz86.github.io/skinny-bones/js/main.js"></script>
+    <script>
+        var data1991Layer;
+        var LandminesLayer;
+        var bih2013layerdataLayer;
 
-  </body>
+        $(document).ready(function() {
+            cartodb.createVis('map', 'https://thenewschool.carto.com/u/stanm282/api/v2/viz/29017e14-34df-11e7-b841-0ef7f98ade21/viz.json', {
+
+                    cartodb_logo: false,
+                    zoom: 7
+                })
+
+
+                .done(function(vis, layers) {
+
+                    // Use same ordering as the one in carto
+                    bih2013layerdataLayer = layers[1].getSubLayer(0);
+                    data1991Layer = layers[1].getSubLayer(1);
+                    LandminesLayer = layers[1].getSubLayer(2);
+
+                    // hide layers by default
+                    data1991Layer.hide();
+                    LandminesLayer.hide();
+                });
+
+
+
+            $('.data1991-checkbox').change(function() {
+                if ($('.data1991-checkbox').prop('checked')) {
+                    // If checked, show the layer
+                    data1991Layer.show();
+                } else {
+                    // Else, hide it
+                    data1991Layer.hide();
+                }
+
+            });
+
+
+            $('.landmines-checkbox').change(function() {
+                if ($('.landmines-checkbox').prop('checked')) {
+                    // If checked, show the layer
+                    LandminesLayer.show();
+                } else {
+                    // Else, hide it
+                    LandminesLayer.hide();
+                }
+            });
+        });
+    </script>
+
+</body>
 
 </html>
